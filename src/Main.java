@@ -1,28 +1,63 @@
-import java.util.Scanner;
+import animals.*;
+import task2.*;
 
 public class Main {
-
     public static void main(String[] args) {
-        Employee[] employeesArray = new Employee[5];
-        employeesArray[0] = new Employee("Petya", "Senior Developer", "petyathebest@mail.ru", "+7999434055", 800000, 48);
-        employeesArray[1] = new Employee("Vasya", "Developer", "vasyathebest@mail.ru", "+7999434255", 400000, 32);
-        employeesArray[2] = new Employee("Kolya", "Developer", "kolyathebest@mail.ru", "+78539434055", 250000, 36);
-        employeesArray[3] = new Employee("Nastya", "Designer", "nastyathebest@mail.ru", "+7999164055", 80000, 26);
-        employeesArray[4] = new Employee("Arthas", "Content Creator", "w3thebest@mail.ru", "+7999432755", 100500, 34);
-//      Перебор массива
-//        for (Employee employee : employeesArray) {
-//            employee.getEmployeeInfo();
+
+        Cat cats[] = new Cat[5];
+        for (int i = 0; i < cats.length; i++) {
+            cats[i] = new Cat("Kotya" + i);
+            System.out.println(cats[i].getName() + " Появился на свет");
+        }
+        Cat.addFoodToBowl(100);
+        Cat.getBowlOfFoodInfo();
+        for (Cat cat : cats) {
+            cat.feedCat(25);
+            System.out.println(cat.getName() + " наелся? " + cat.getFullness());
+        }
+
+        System.out.println("");
+
+        cats[3].toSwim(5);
+        cats[3].toRun(250);
+
+        System.out.println("");
+
+//
+//        Dog dogs[] = new Dog[5];
+//        for (int i = 0; i < dogs.length; i++) {
+//            dogs[i] = new Dog("Bobik" + i);
+//            System.out.println(dogs[i].getName() + " Появился на свет");
 //        }
+//        Dog.addFoodToBowl(100);
+//        Dog.getBowlOfFoodInfo();
+//        for (int i = 0; i < dogs.length; i++) {
+//            dogs[i].feedDog(30);
+//            System.out.println(dogs[i].getName()+" наелся? "+dogs[i].getFullness());
+//        }
+//
+//        System.out.println("");
 
-        //Task 2
+        Animal.showAnimalCount();
+        Cat.showCatCount();
+        Dog.showDogCount();
 
-//        Park.Attraction attraction = new Park.Attraction("MeowMeow","13:00 - 19:00",15.50);
-//        attraction.getAttractionInfo();
+        System.out.println("");
 
+        Circle circle = new Circle(7);
+        circle.setFillColor("Жёлтый");
+        circle.setBorderColor("Черный");
+
+        Rectangle rectangle = new Rectangle(6, 13);
+        rectangle.setFillColor("Фиолетовый");
+        rectangle.setBorderColor("Красный");
+
+        Triangle triangle = new Triangle(3, 4, 6);
+        triangle.setFillColor("Синий");
+        triangle.setBorderColor("Белый");
+
+        System.out.println("Круг: Периметр = " + circle.getPerimeter() + ", Площадь = " + circle.getArea() + ", Цвет фона = " + circle.getFillColor() + ", Цвет границы = " + circle.getBorderColor());
+        System.out.println("Прямоугольник: Периметр = " + rectangle.getPerimeter() + ", Площадь = " + rectangle.getArea() + ", Цвет фона = " + rectangle.getFillColor() + ", Цвет границы = " + rectangle.getBorderColor());
+        System.out.println("Треугольник: Периметр = " + triangle.getPerimeter() + ", Площадь = " + triangle.getArea() + ", Цвет фона = " + triangle.getFillColor() + ", Цвет границы = " + triangle.getBorderColor());
     }
 }
-
-
-
-
-
