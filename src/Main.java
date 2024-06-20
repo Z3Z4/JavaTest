@@ -1,71 +1,42 @@
-import exception.MyArrayDataException;
-import exception.MyArraySizeException;
+import java.util.*;
+import telephoneDirectory.TelephoneDirectory;
 
 public class Main {
     public static void main(String[] args) {
-        String[][] validArray = {
-                {"1", "2", "3", "4"},
-                {"5", "6", "7", "8"},
-                {"9", "10", "11", "12"},
-                {"13", "14", "15", "16",}
-        };
-
-        String[][] invalidSizeArray = {
-                {"1", "2", "3"},
-                {"4", "5", "6"},
-                {"7", "8", "9"}
-        };
-
-        String[][] invalidDataArray = {
-                {"1", "2", "3", "4"},
-                {"5", "meow", "7", "8"},
-                {"9", "10", "11", "12"},
-                {"13", "14", "15", "16"}
-        };
-        try {
-            System.out.println(changeMatrix(validArray));
-        } catch (MyArraySizeException ex) {
-            ex.printStackTrace();
-        } catch (MyArrayDataException ex) {
-            ex.printStackTrace();
+        String[] words = {"Cat", "Dog", "Word", "Flight", "Song", "Cat", "Cat", "Word", "Brother", "Dance", "Song"};
+        ArrayList arrayList = new ArrayList<String>(Arrays.asList(words));
+        Set<String> uniqueWords = new HashSet<>(arrayList);
+        System.out.println("Unique words: ");
+        for (String element : uniqueWords) {
+            System.out.println(element);
+        }
+        Map<String, Integer> wordCountMap = new HashMap<>();
+        arrayList.toArray();
+        for (String word : words) {
+            wordCountMap.put(word, wordCountMap.getOrDefault(word, 0) + 1);
+        }
+        System.out.println("\nHow much times every word entries ");
+        for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
+        System.out.println("");
 
-    }
+        TelephoneDirectory telephoneDirectory = new TelephoneDirectory();
+
+        TelephoneDirectory.add("Kotin","+85395293529");
+        TelephoneDirectory.add("Ivanov","+8534184529");
+        TelephoneDirectory.add("Sidorov","+853341493529");
+        TelephoneDirectory.add("Ivanov","+851111233529");
+        TelephoneDirectory.add("Sedov","+8539321346729");
+        TelephoneDirectory.get("Ivanov");
+        TelephoneDirectory.get("Sedov");
 
 
-    public static int changeMatrix(String[][] matrix) throws MyArraySizeException, MyArrayDataException {
-        if (matrix.length != 4) {
-            throw new MyArraySizeException("Matrix must be 4x4 size only");
-        }
-        for (int g = 0; g < matrix.length; g++) {
-            if (matrix[g].length != 4) {
-                throw new MyArraySizeException("Array must be 4x4 in size.");
-            }
-        }
-        int result = 0;
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                try {
-                    result += Integer.parseInt(matrix[i][j]);
-                } catch (NumberFormatException e) {
-                    throw new MyArrayDataException("Invalid data at (" + i + ", " + j + "): " + matrix[i][j]);
-                }
-            }
-        }
-        return result;
-    }
-
-    public static void showMatrix(String[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
     }
 }
+
 
 
 
