@@ -20,7 +20,7 @@ public class Main {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
-        System.out.println("");
+        System.out.println(" ");
 
         TelephoneDirectory telephoneDirectory = new TelephoneDirectory();
 
