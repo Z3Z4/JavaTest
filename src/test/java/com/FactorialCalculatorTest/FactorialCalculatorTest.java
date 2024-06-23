@@ -1,45 +1,43 @@
 package com.FactorialCalculatorTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
 import com.FactorialCalculator.FactorialCalculator;
-import org.junit.jupiter.api.Test;
-
 
 public class FactorialCalculatorTest {
 
     @Test
     public void testFactorialOfZero() {
-        assertEquals(1, FactorialCalculator.factorial(0));
+        assertEquals(FactorialCalculator.factorial(0), 1);
     }
 
     @Test
     public void testFactorialOfOne() {
-        assertEquals(1, FactorialCalculator.factorial(1));
+        assertEquals(FactorialCalculator.factorial(1), 1);
     }
 
     @Test
     public void testFactorialOfTwo() {
-        assertEquals(2, FactorialCalculator.factorial(2));
+        assertEquals(FactorialCalculator.factorial(2), 2);
     }
 
     @Test
     public void testFactorialOfThree() {
-        assertEquals(6, FactorialCalculator.factorial(3));
+        assertEquals(FactorialCalculator.factorial(3), 6);
     }
 
     @Test
     public void testFactorialOfFour() {
-        assertEquals(24, FactorialCalculator.factorial(4));
+        assertEquals(FactorialCalculator.factorial(4), 24);
     }
 
     @Test
     public void testFactorialOfFive() {
-        assertEquals(120, FactorialCalculator.factorial(5));
+        assertEquals(FactorialCalculator.factorial(5), 120);
     }
 
     @Test
     public void testFactorialOfTen() {
-        assertEquals(3628800, FactorialCalculator.factorial(10));
+        assertEquals(FactorialCalculator.factorial(10), 3628800);
     }
 }
