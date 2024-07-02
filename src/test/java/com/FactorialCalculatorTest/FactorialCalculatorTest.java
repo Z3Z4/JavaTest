@@ -42,4 +42,31 @@ public class FactorialCalculatorTest {
     public void testFactorialOfTen() {
         assertEquals(3628800, FactorialCalculator.factorial(10));
     }
+
+    @Test
+    public void testFactorialOfMinusOne() {
+        assertEquals(1, FactorialCalculator.factorial(-1));
+    }
+
+    @Test
+    public void testFactorialOfMinusTwo() {
+        assertEquals(1, FactorialCalculator.factorial(-2));
+    }
+
+    @Test
+    public void testFactorialOfMinusThree() {
+        assertEquals(1, FactorialCalculator.factorial(-3));
+    }
+    @Test
+    public void testFactorialOfMinusFour() {
+        assertEquals(1, FactorialCalculator.factorial(-4));
+    }
+    @Test
+    public void testFactorialOfMinusFive() {
+        assertEquals(1, FactorialCalculator.factorial(-5));
+    }
+    @Test
+    public void testFactorialOfMinusTen() {
+        assertEquals(1, FactorialCalculator.factorial(-10));
+    }
 }
