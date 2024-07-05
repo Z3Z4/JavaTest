@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jul 05 17:12:02 MSK 2024","Fri Jul 05 17:12:02 MSK 2024","89","","App.selenium.ChromeTest","","App.selenium.ChromeTest","payPartnersIconsTest","payPartnersIconsTest()",""
+"passed","Fri Jul 05 17:12:02 MSK 2024","Fri Jul 05 17:12:02 MSK 2024","61","","App.selenium.ChromeTest","","App.selenium.ChromeTest","payWrapperIsCorrectFieldsTest","payWrapperIsCorrectFieldsTest()",""
+"passed","Fri Jul 05 17:12:02 MSK 2024","Fri Jul 05 17:12:02 MSK 2024","98","","App.selenium.ChromeTest","","App.selenium.ChromeTest","tearDown","tearDown()",""
+"passed","Fri Jul 05 17:11:27 MSK 2024","Fri Jul 05 17:11:55 MSK 2024","28116","","App.selenium.ChromeTest","","App.selenium.ChromeTest","authorization","authorization()",""
+"passed","Fri Jul 05 17:11:55 MSK 2024","Fri Jul 05 17:11:56 MSK 2024","1351","","App.selenium.ChromeTest","","App.selenium.ChromeTest","payFormsConnectionPlaceHolderTextTest","payFormsConnectionPlaceHolderTextTest()",""
+"passed","Fri Jul 05 17:11:56 MSK 2024","Fri Jul 05 17:12:02 MSK 2024","5466","","App.selenium.ChromeTest","","App.selenium.ChromeTest","payWrapperIsCorrectSumTest","payWrapperIsCorrectSumTest()",""

@@ -1,5 +1,8 @@
 package App.selenium;
 
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,6 +30,7 @@ public class ChromeTest {
 
     @Test
     @Order(1)
+    @Story("Авторизация")
     public void authorization() {
         driver.get("https://www.mts.by/");
         WebElement cookieAgree = driver.findElement(new By.ById("cookie-agree"));
@@ -35,6 +39,7 @@ public class ChromeTest {
 
     @Test
     @Order(2)
+    @Story("Проверка текста внутри блока оплаты")
     public void payFormsConnectionPlaceHolderTextTest() {
         WebElement connectionPhone = driver.findElement(new By.ById("connection-phone"));
         assertEquals("Номер телефона", connectionPhone.getAttribute("placeholder"));
@@ -77,6 +82,7 @@ public class ChromeTest {
 
     @Test
     @Order(3)
+    @Story("Проверка суммы при оплате")
     public void payWrapperIsCorrectSumTest() throws InterruptedException {
         WebElement selectMenu = driver.findElement(new By.ByXPath("//div[@class='select__wrapper']//button"));
         selectMenu.click();
@@ -99,6 +105,7 @@ public class ChromeTest {
 
     @Test
     @Order(4)
+    @Story("Проверка полей при оплате")
     public void payWrapperIsCorrectFieldsTest() {
         WebElement phoneNumber = driver.findElement(new By.ByXPath("//div[@class='pay-description__text']//span"));
 
@@ -118,6 +125,7 @@ public class ChromeTest {
     }
     @Test
     @Order(5)
+    @Story("Проверка логотипов партнеров")
     public void payPartnersIconsTest() {
         WebElement payPartnersLogoMasterCard = driver.findElement(new By.ByXPath("//*[contains(@class, 'cards-brands__container')]//img[1]"));
         int height1 = payPartnersLogoMasterCard.getSize().height;
